@@ -17,6 +17,10 @@ namespace UserRegistration
             Console.Write("Enter your Email:");
             string email = Console.ReadLine();
             user.CheckMail(email);
+            Console.Write("Enter your PhoneNumber:");
+            string PhoneNumber = Console.ReadLine();
+            user.CheckPhoneNumber(PhoneNumber);
+          
 
         }
     }

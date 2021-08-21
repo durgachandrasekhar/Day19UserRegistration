@@ -39,5 +39,22 @@ namespace UserRegistration
                 Console.WriteLine("Email :{0} is Invalid", mail);
             }
         }
+        public void CheckPhoneNumber(string PhoneNumber)
+        {
+            //regex pattern is created to check validity
+            string pattern = "^[1-9]{1,2}[ ][1-9]{1}[0-9]{9}$";
+            Regex regex = new Regex(pattern);
+            // IsMatch method check the pattern and mail
+            if (regex.IsMatch(PhoneNumber))
+            {
+                Console.WriteLine("PhoneNumber :{0} is Valid", PhoneNumber);
+            }
+            else
+            {
+                Console.WriteLine("PhoneNumber :{0} is Invalid", PhoneNumber);
+
+            }
+        }
+
     }
 }
