@@ -20,7 +20,9 @@ namespace UserRegistration
             Console.Write("Enter your PhoneNumber:");
             string PhoneNumber = Console.ReadLine();
             user.CheckPhoneNumber(PhoneNumber);
-          
+            Console.Write("Enter your Password:");
+            string Password = Console.ReadLine();
+            user.CheckPassword(Password);
 
         }
     }

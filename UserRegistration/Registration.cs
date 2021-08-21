@@ -55,6 +55,21 @@ namespace UserRegistration
 
             }
         }
+        public void CheckPassword(string Password)
+        {
+            //regex pattern is created to check validity
+            string pattern = @"^[a-zA-Z0-9]{8}[a-zA-Z0-9]*";
+            Regex regex = new Regex(pattern);
+            // IsMatch method check the pattern and mail
+            if (regex.IsMatch(Password))
+            {
+                Console.WriteLine("Password :{0} is Valid", Password);
+            }
+            else
+            {
+                Console.WriteLine("Password :{0} is Invalid", Password);
 
+            }
+        }
     }
 }
