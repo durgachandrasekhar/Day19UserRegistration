@@ -27,7 +27,7 @@ namespace UserRegistration
         public void CheckMail(string mail)
         {
             //regex pattern is created to check validity
-            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            string pattern = @"^[A-Za-z0-9]+([\.+\-_][A-Za-z0-9]+)*@[a-zA-Z0-9]+\.?[A-Za-z]+\.?[A-Za-z]{2,}$";
             Regex regex = new Regex(pattern);
             // IsMatch method check the pattern and mail
             if (regex.IsMatch(mail))
@@ -36,6 +36,7 @@ namespace UserRegistration
             }
             else
             {
+
                 Console.WriteLine("Email :{0} is Invalid", mail);
             }
         }
