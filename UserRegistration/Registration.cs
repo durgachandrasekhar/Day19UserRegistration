@@ -58,7 +58,7 @@ namespace UserRegistration
         public void CheckPassword(string Password)
         {
             //regex pattern is created to check validity
-            string pattern = @"^[a-zA-Z0-9]{8}[a-zA-Z0-9]*";
+            string pattern = @"^(.{0,10}|[^0-9]*|[^a-z])$";
             Regex regex = new Regex(pattern);
             // IsMatch method check the pattern and mail
             if (regex.IsMatch(Password))
