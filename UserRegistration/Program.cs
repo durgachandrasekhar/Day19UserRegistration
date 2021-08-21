@@ -6,14 +6,17 @@ namespace UserRegistration
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("The User Registration Problem");
-            Registration user = new Registration();
-            Console.Write("Enter your First name : ");
+            Console.WriteLine("User Registration Problem");
+            Registratoion user = new Registratoion();
+            Console.Write("Enter your First name:");
             string firstName = Console.ReadLine();
             user.Check(firstName);
-            Console.Write("Enter your Last name : ");
-            string LastName = Console.ReadLine();
-            user.Check(LastName);
+            Console.Write("Enter your Last name:");
+            string lastName = Console.ReadLine();
+            user.Check(lastName);
+            Console.Write("Enter your Email:");
+            string email = Console.ReadLine();
+            user.CheckMail(email);
 
         }
     }

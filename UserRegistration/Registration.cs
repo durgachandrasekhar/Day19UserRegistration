@@ -7,12 +7,14 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistration
 {
-    class Registration
+    public class Registratoion
     {
         public void Check(string name)
         {
-            string pattern = "^[A-Z][a-z]{3}[a-z]*$";
+            //regex pattern is created to check validity
+            string pattern = "[A-Z][a-z]{3}[a-z]*";
             Regex regex = new Regex(pattern);
+            // IsMatch method check the pattern and name
             if (regex.IsMatch(name))
             {
                 Console.WriteLine("Name {0} is Valid ", name);
@@ -20,6 +22,21 @@ namespace UserRegistration
             else
             {
                 Console.WriteLine("Name {0} is Invalid", name);
+            }
+        }
+        public void CheckMail(string mail)
+        {
+            //regex pattern is created to check validity
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            Regex regex = new Regex(pattern);
+            // IsMatch method check the pattern and mail
+            if (regex.IsMatch(mail))
+            {
+                Console.WriteLine("Email :{0} is Valid", mail);
+            }
+            else
+            {
+                Console.WriteLine("Email :{0} is Invalid", mail);
             }
         }
     }
